@@ -141,7 +141,7 @@ function Slider() {
           return (
             <button
               key={index}
-              className={`relative w-[8px] h-[8px] p-0 rounded-[50%] outline-none border-[1px] border-gray-100 mx-[2px] transition-all duration-300 ease-in ${
+              className={`relative w-[8px] h-[8px] p-0 rounded-[50%] outline-none mx-[2px] transition-all duration-300 ease-in ${
                 activeIndex === index ? "bg-black" : "bg-white"
               }`}
               onClick={(e) => {
@@ -154,22 +154,22 @@ function Slider() {
       </div>
 
       <button
-        className="outline-none border-0 text-white active:text-black text-[24px] bg-black p-2 absolute right-0"
+        className="outline-none border-0 text-black active:text-white rounded-full w-[35px] h-[35px] text-[18px] flex justify-center items-center bg-white p-2 absolute right-2"
         onClick={(e) => {
           e.preventDefault();
           slideNext();
         }}
       >
-        {">"}
+        <i className="bi bi-chevron-right flex justify-center items-center"></i>
       </button>
       <button
-        className="outline-none border-0 text-white active:text-black text-[24px] bg-black p-2 absolute left-0"
+        className="outline-none border-0 text-black active:text-white rounded-full w-[35px] h-[35px] text-[18px] flex justify-center items-center bg-white p-2 absolute left-2"
         onClick={(e) => {
           e.preventDefault();
           slidePrev();
         }}
       >
-        {"<"}
+        <i className="bi bi-chevron-left flex justify-center items-center"></i>
       </button>
     </div>
   );
